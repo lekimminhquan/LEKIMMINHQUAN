@@ -1,15 +1,16 @@
 .header {
-  background: linear-gradient(to left, #091557, #122690,#203397);
+  background: linear-gradient(90deg, #091557, #122690,#203397);
   padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1;
   max-height: 65px;
+
 }
 
 .item{
-  background: linear-gradient(to right, #1553EF, #0C3089,#0C1A4C);
+  background: linear-gradient(90deg, #1553EF, #0C3089, #0C1A4C);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,5 +20,61 @@
   gap: 5px;
   max-height: 40px;
   cursor: pointer;
-  border: 2px solid linear-gradient(to right, #1456FF80, #658BEC80,#092E8D80);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 26px;
+    padding: 2px;
+    background: linear-gradient(90deg, #1456FF80, #658BEC80, #092E8D80);
+    mask: linear-gradient(#fff 0 0) content-box, 
+          linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, 
+                 linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    pointer-events: none;
+  }
+}
+
+.TransferValue{
+  max-width: 360px;
+  min-width: 360px;
+  height: 210px;
+  padding: 10px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #0A1F5566, #102C7366, #0C1A4C66);
+  border: 1px solid transparent;
+  position: relative;
+  overflow-x: auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    padding: 1px;
+    background: linear-gradient(to left, 
+      #09379447 28%,
+      #09379447 28%,
+      #09379447 28%
+    );
+    mask: linear-gradient(#fff 0 0) content-box, 
+          linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, 
+                 linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    pointer-events: none;
+  }
 }

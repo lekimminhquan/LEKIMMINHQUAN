@@ -3,12 +3,11 @@ import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
+import unusedImports from "eslint-plugin-unused-imports"; // Import the unused-imports plugin
 
 export default [
-  // Base configuration from @eslint/js
   js.configs.recommended,
 
-  // Add TypeScript plugin and parser
   {
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
@@ -16,22 +15,30 @@ export default [
     },
     plugins: {
       "@typescript-eslint": typescriptEslint,
-      "react": react,
+      react: react,
       "react-hooks": reactHooks,
+      "unused-imports": unusedImports,
     },
     settings: {
       react: {
-        version: "detect", // Automatically detect React version
+        version: "detect",
       },
     },
     rules: {
-      // TypeScript-specific rules
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "@typescript-eslint/no-var-requires": "off",
-
-      // General ESLint rules
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "warn",
+        {
+          vars: "all",
+          varsIgnorePattern: "^_",
+          args: "after-used",
+          argsIgnorePattern: "^_",
+        },
+      ],
       "no-console": "off",
-      "indent": [
+      indent: [
         "error",
         2,
         {
@@ -45,7 +52,6 @@ export default [
         },
       ],
 
-      // React-specific rules
       "react/display-name": "warn",
       "react-hooks/exhaustive-deps": "warn",
       "react-hooks/rules-of-hooks": "error",

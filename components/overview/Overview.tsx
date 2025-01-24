@@ -1,10 +1,10 @@
 import React from 'react'
-import OverviewHeader from './components/OverviewHeader'
 import OverviewContent from './components/OverviewContent'
+import OverviewHeader from './components/OverviewHeader'
 
 const Overview = () => {
   return (
-    <div className="flex flex-col h-screen bg-black">
+    <div className="flex flex-col bg-black overflow-y-auto">
       <OverviewHeader />
       <OverviewContent />
     </div>

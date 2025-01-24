@@ -64,7 +64,7 @@
       },
       "position": "M",
       "height": 178,
-      "preferredFoot": null,
+      "preferredFoot": "Right",
       "dateOfBirthTimestamp": 1041897600,
       "contractUntilTimestamp": 1751212800,
       "proposedMarketValue": 9000000,
