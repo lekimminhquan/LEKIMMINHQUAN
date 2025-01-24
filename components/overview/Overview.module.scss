@@ -1,0 +1,23 @@
+.header {
+  background: linear-gradient(to left, #091557, #122690,#203397);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  max-height: 65px;
+}
+
+.item{
+  background: linear-gradient(to right, #1553EF, #0C3089,#0C1A4C);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 26px;
+  gap: 5px;
+  max-height: 40px;
+  cursor: pointer;
+  border: 2px solid linear-gradient(to right, #1456FF80, #658BEC80,#092E8D80);
+}
