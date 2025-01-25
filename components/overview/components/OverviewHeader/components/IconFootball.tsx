@@ -1,6 +1,7 @@
 import * as React from "react";
 
-const SvgIcon: React.FC<React.SVGProps<SVGElement>> = (props) => (
+// eslint-disable-next-line no-undef
+const SvgIcon: React.FC<React.SVGProps<SVGElement>> = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
