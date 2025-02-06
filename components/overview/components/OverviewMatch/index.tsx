@@ -1,1 +1,0 @@
-export { default as OverviewMatch } from "./components/OverviewMatch"

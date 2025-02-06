@@ -2,6 +2,8 @@ import React from 'react'
 import { MantineProvider } from "@mantine/core";
 import "./globals.css";
 import '@mantine/core/styles.css';
+import '@mantine/notifications/styles.css';
+import { Notifications } from '@mantine/notifications';
 
 
 export default function RootLayout({
@@ -20,8 +22,9 @@ export default function RootLayout({
       </head>
       <body>
         <MantineProvider theme={{
-          fontFamily: 'Inter, sans-serif',
+          fontFamily: 'Open Sans, sans-serif',
         }}>
+          <Notifications />
           {children}
         </MantineProvider>
       </body>

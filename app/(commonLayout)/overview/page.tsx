@@ -1,5 +1,5 @@
-import Overview from "@/components/overview";
+import CurrencySwapForm from "@/src/problem2/Problem2";
 
 export default function OverviewPage() {
-  return <Overview />;
+  return <CurrencySwapForm />;
 }
